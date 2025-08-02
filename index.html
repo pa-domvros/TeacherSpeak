@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherSpeak - Effective Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Updated font to Nunito Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Updated font-family to Nunito Sans */
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        /* Styles for the inner accordion (phrase explanations) */
+        .phrase-item .explanation-wrapper {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 1rem;
+        }
+        .phrase-item.active .explanation-wrapper {
+            display: block;
+            max-height: 500px;
+            padding: 1rem 1rem 0 1rem;
+        }
+        .phrase-item .phrase {
+            cursor: pointer;
+        }
+        /* Styles for the main collapsible categories */
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out;
+        }
+        .collapsible-container.open .collapsible-content {
+            max-height: 2500px;
+        }
+        .collapsible-container.open .chevron-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header Section -->
+        <header class="text-center mb-8">
+            <!-- App Title Added -->
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-1" data-lang-en="TeacherSpeak" data-lang-el="TeacherSpeak">TeacherSpeak</h1>
+            <!-- Page Subtitle -->
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2" data-lang-en="Effective Teacher-Student Communication" data-lang-el="Αποτελεσματική Επικοινωνία Εκπαιδευτικών-Μαθητών">Effective Teacher-Student Communication</h2>
+            <p class="text-lg text-gray-600 italic" data-lang-en="Created by Panagiotis Domvros, English and Drama Teacher" data-lang-el="Δημιουργήθηκε από τον Παναγιώτη Δόμβρο, Εκπαιδευτικό Αγγλικής Γλώσσας-Θεατρολόγο">Created by Panagiotis Domvros, English and Drama Teacher</p>
+            
+            <!-- Language Dropdown Container -->
+            <div class="flex justify-center mt-6">
+<select id="language-select" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5">
+    <option value="en">English (EN)</option>
+    <option value="el" selected>Ελληνικά (ΕΛ)</option>
+</select>
+            </div>
+        </header>
+
+        <!-- Introductory Image -->
+        <div class="flex justify-center mb-8 max-w-4xl mx-auto">
+            <img src="0.jpg" alt="An introductory image related to communication and teaching" class="rounded-lg shadow-lg max-w-lg h-auto" onerror="this.onerror=null;this.src='https://placehold.co/512x240/cccccc/ffffff?text=Introductory+Image';">
+        </div>
+
+        <!-- Main Content - Collapsible Sections -->
+        <main class="space-y-4 max-w-4xl mx-auto">
+
+            <!-- Collapsible 1: Building Trust and Connection -->
+            <div class="collapsible-container bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="collapsible-header flex justify-between items-center p-6 cursor-pointer border-t-4 border-blue-500">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800" data-lang-en="Building Trust & Connection" data-lang-el="Οικοδόμηση Εμπιστοσύνης & Σύνδεσης">Building Trust & Connection</h2>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="p-6 pt-0 space-y-3">
+                        <li class="phrase-item"><div class="phrase p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition" data-lang-en='"Tell me more about your idea."' data-lang-el='"Πες μου περισσότερα για την ιδέα σου."'>"Tell me more about your idea."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-blue-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/1.jpg" data-src-en="images/1.jpg" data-src-el="images-greek/1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=Image+1';"><p class="text-blue-800 flex-1" data-lang-en="This shows interest in a student's thoughts and encourages them to elaborate." data-lang-el="Δείχνει ενδιαφέρον για τις σκέψεις των μαθητών και τους ενθαρρύνει να τις αναπτύξουν περαιτέρω.">This shows interest in a student's thoughts and encourages them to elaborate.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition" data-lang-en='"I appreciate your honesty about your progress on this project."' data-lang-el='"Εκτιμώ την ειλικρίνειά σου σχετικά με την πρόοδό σου σε αυτό το έργο."'>"I appreciate your honesty..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-blue-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/2.jpg" data-src-en="images/2.jpg" data-src-el="images-greek/2.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=Image+2';"><p class="text-blue-800 flex-1" data-lang-en="This encourages truth-telling and builds a foundation of trust." data-lang-el="Ενθαρρύνει τη φερεγγυότητα και χτίζει εμπιστοσύνη.">This encourages truth-telling and builds a foundation of trust.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition" data-lang-en='"You&apos;re really good at [specific praise]."' data-lang-el='"Τα πας πολύ καλά στο [συγκεκριμένος έπαινος]."'>"You're really good at..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-blue-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/3.jpg" data-src-en="images/3.jpg" data-src-el="images-greek/3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=Image+3';"><p class="text-blue-800 flex-1" data-lang-en="This builds connection through sincere, specific praise." data-lang-el="Ενισχύει τη σχέση με ειλικρινείς, συγκεκριμένους επαίνους.">This builds connection through sincere, specific praise.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition" data-lang-en='"Thank you for trusting me with that."' data-lang-el='"Ευχαριστώ που μου έδειξες εμπιστοσύνη."'>"Thank you for trusting me..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-blue-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/4.jpg" data-src-en="images/4.jpg" data-src-el="images-greek/4.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=Image+4';"><p class="text-blue-800 flex-1" data-lang-en="This affirms a student's vulnerability and builds a trusting relationship." data-lang-el="Επιβεβαιώνει την ευαλωτότητα των μαθητών και ενισχύει την εμπιστοσύνη στη σχέση.">This affirms a student's vulnerability and builds a trusting relationship.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition" data-lang-en='"I can see this project means a lot to you."' data-lang-el='"Βλέπω ότι αυτό έχει μεγάλη σημασία για σένα."'>"I can see this project means a lot..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-blue-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/5.jpg" data-src-en="images/5.jpg" data-src-el="images-greek/5.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=Image+5';"><p class="text-blue-800 flex-1" data-lang-en="This recognizes a student's emotional investment and effort." data-lang-el="Αναγνωρίζει τη συναισθηματική επένδυση και την προσπάθεια των μαθητών.">This recognizes a student's emotional investment and effort.</p></div></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Collapsible 2: Fostering Collaboration and Problem-Solving -->
+            <div class="collapsible-container bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="collapsible-header flex justify-between items-center p-6 cursor-pointer border-t-4 border-green-500">
+                    <div class="flex items-center">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                           <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800" data-lang-en="Fostering Collaboration & Problem-Solving" data-lang-el="Ενίσχυση Συνεργασίας & Επίλυσης Προβλημάτων">Fostering Collaboration & Problem-Solving</h2>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="p-6 pt-0 space-y-3">
+                        <li class="phrase-item"><div class="phrase p-3 bg-green-50 rounded-lg hover:bg-green-100 transition" data-lang-en='"What kind of help would be most useful for you right now?"' data-lang-el='"Τι είδους βοήθεια θα ήταν πιο χρήσιμη για εσένα αυτή τη στιγμή;"'>"What kind of help would be most useful..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-green-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/6.jpg" data-src-en="images/6.jpg" data-src-el="images-greek/6.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/dcfce7/16a34a?text=Image+6';"><p class="text-green-800 flex-1" data-lang-en="This offers support without making assumptions about a student's needs." data-lang-el="Προσφέρει υποστήριξη χωρίς να κάνει υποθέσεις για τις ανάγκες των μαθητών.">This offers support without making assumptions about a student's needs.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-green-50 rounded-lg hover:bg-green-100 transition" data-lang-en='"Let&apos;s work together to find a solution..."' data-lang-el='"Ας συνεργαστούμε για να βρούμε μια λύση..."'>"Let's work together to find a solution..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-green-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/7.jpg" data-src-en="images/7.jpg" data-src-el="images-greek/7.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/dcfce7/16a34a?text=Image+7';"><p class="text-green-800 flex-1" data-lang-en="This shifts the dynamic to a collaborative effort." data-lang-el="Μεταβάλλει τη δυναμική σε από κοινού προσπάθεια.">This shifts the dynamic to a collaborative effort.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-green-50 rounded-lg hover:bg-green-100 transition" data-lang-en='"Help me understand what part of this is most confusing..."' data-lang-el='"Βοήθησέ με να καταλάβω ποιο κομμάτι σε μπερδεύει περισσότερο."'>"Help me understand what part is most confusing..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-green-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/8.jpg" data-src-en="images/8.jpg" data-src-el="images-greek/8.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/dcfce7/16a34a?text=Image+8';"><p class="text-green-800 flex-1" data-lang-en="This helps to dig beneath a student's frustration to find the root of the problem." data-lang-el="Αναζητεί την πηγή της σύγχυσης κάτω από τη φανερή απογοήτευση των μαθητών.">This helps to dig beneath a student's frustration to find the root of the problem.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-green-50 rounded-lg hover:bg-green-100 transition" data-lang-en='"What&apos;s the best way for me to help you be successful with this?"' data-lang-el='"Ποιος είναι ο καλύτερος τρόπος να σε βοηθήσω να τα καταφέρεις με αυτό;"'>"What's the best way for me to help..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-green-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/9.jpg" data-src-en="images/9.jpg" data-src-el="images-greek/9.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/dcfce7/16a34a?text=Image+9';"><p class="text-green-800 flex-1" data-lang-en="This empowers students to take ownership of their learning." data-lang-el="Ενδυναμώνει τους μαθητές να αναλάβουν την ευθύνη της μάθησής τους.">This empowers students to take ownership of their learning.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-green-50 rounded-lg hover:bg-green-100 transition" data-lang-en='"I don&apos;t want to assume—can you help me understand your thought process here?"' data-lang-el='"Δεν θέλω να κάνω υποθέσεις — μπορείς να με βοηθήσεις να καταλάβω τη σκέψη σου εδώ;"'>"I don't want to assume..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-green-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/10.jpg" data-src-en="images/10.jpg" data-src-el="images-greek/10.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/dcfce7/16a34a?text=Image+10';"><p class="text-green-800 flex-1" data-lang-en="This avoids misjudgment and invites clarity about a student's work." data-lang-el="Αποφεύγει την παρερμηνεία και οδηγεί στη διευκρίνιση της μαθησιακής διαδικασίας.">This avoids misjudgment and invites clarity about a student's work.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-green-50 rounded-lg hover:bg-green-100 transition" data-lang-en='"How can we make this concept easier for you to grasp?"' data-lang-el='"Πώς μπορούμε να κάνουμε αυτή την έννοια πιο κατανοητή για σένα;"'>"How can we make this concept easier..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-green-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/11.jpg" data-src-en="images/11.jpg" data-src-el="images-greek/11.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/dcfce7/16a34a?text=Image+11';"><p class="text-green-800 flex-1" data-lang-en="This shifts the focus to collaborative problem-solving for a student's learning." data-lang-el="Μετατοπίζει την εστίαση σε συνεργατική επίλυση για τη μάθηση.">This shifts the focus to collaborative problem-solving for a student's learning.</p></div></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Collapsible 3: Promoting Empathy & Respect -->
+            <div class="collapsible-container bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="collapsible-header flex justify-between items-center p-6 cursor-pointer border-t-4 border-purple-500">
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h6.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V8z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800" data-lang-en="Promoting Empathy & Respect" data-lang-el="Προώθηση Ενσυναίσθησης & Σεβασμού">Promoting Empathy & Respect</h2>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="p-6 pt-0 space-y-3">
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"That sounds like it was a really tough problem to solve."' data-lang-el='"Φαίνεται πως ήταν ένα πολύ δύσκολο πρόβλημα να λυθεί."'>"That sounds like it was a really tough problem..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/12.jpg" data-src-en="images/12.jpg" data-src-el="images-greek/12.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+12';"><p class="text-purple-800 flex-1" data-lang-en="This validates a student's struggles and builds empathy." data-lang-el="Επικυρώνει τις δυσκολίες των μαθητών και ενισχύει την ενσυναίσθηση.">This validates a student's struggles and builds empathy.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"I hear what you&apos;re saying about the assignment."' data-lang-el='"Καταλαβαίνω τι λες για την εργασία."'>"I hear what you're saying..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/13.jpg" data-src-en="images/13.jpg" data-src-el="images-greek/13.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+13';"><p class="text-purple-800 flex-1" data-lang-en="This acknowledges a student's perspective without immediately agreeing or disagreeing." data-lang-el="Αναγνωρίζει την οπτική των μαθητών χωρίς να συμφωνεί ή να διαφωνεί άμεσα.">This acknowledges a student's perspective without immediately agreeing or disagreeing.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"How would you feel if someone said that to you?"' data-lang-el='"Πώς θα ένιωθες αν σου το έλεγε κάποιος άλλος;"'>"How would you feel if..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/14.jpg" data-src-en="images/14.jpg" data-src-el="images-greek/14.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+14';"><p class="text-purple-800 flex-1" data-lang-en="This promotes empathy and helps students see things from another's point of view." data-lang-el="Προάγει την ενσυναίσθηση και βοηθά τους μαθητές να δουν τα πράγματα από άλλη οπτική.">This promotes empathy and helps students see things from another's point of view.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"I respect your point of view on this topic, even if I have a different one."' data-lang-el='"Σέβομαι τη δική σου άποψη για αυτό το θέμα, ακόμη κι αν έχω διαφορετική."'>"I respect your point of view..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/15.jpg" data-src-en="images/15.jpg" data-src-el="images-greek/15.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+15';"><p class="text-purple-800 flex-1" data-lang-en="This maintains dignity and models respectful disagreement." data-lang-el="Διατηρεί την αξιοπρέπεια και προάγει σεβασμό στη διαφωνία.">This maintains dignity and models respectful disagreement.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"That&apos;s not a fair consequence."' data-lang-el='"Αυτό δεν είναι δίκαιο αποτέλεσμα."'>"That's not a fair consequence."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/16.jpg" data-src-en="images/16.jpg" data-src-el="images-greek/16.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+16';"><p class="text-purple-800 flex-1" data-lang-en="This acknowledges an injustice or imbalance directly." data-lang-el="Αναγνωρίζει άδικο αποτέλεσμα ή ανισορροπία άμεσα.">This acknowledges an injustice or imbalance directly.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"That makes total sense."' data-lang-el='"Αυτό που λες βγάζει νόημα."'>"That makes total sense."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/17.jpg" data-src-en="images/17.jpg" data-src-el="images-greek/17.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+17';"><p class="text-purple-800 flex-1" data-lang-en="This validates a student's reasoning or feelings without necessarily agreeing with their conclusion." data-lang-el="Επικυρώνει τη λογική ή τα συναισθήματα των μαθητών χωρίς απαραίτητα να συμφωνεί με το συμπέρασμά στο οποίο έχουν φτάσει.">This validates a student's reasoning or feelings without necessarily agreeing with their conclusion.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition" data-lang-en='"Would you like me to give you some advice, or would you just like me to listen?"' data-lang-el='"Θέλεις να σου δώσω κάποια συμβουλή ή απλώς να ακούσω;"'>"Would you like advice, or just for me to listen?"</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-purple-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/18.jpg" data-src-en="images/18.jpg" data-src-el="images-greek/18.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f3e8ff/7e22ce?text=Image+18';"><p class="text-purple-800 flex-1" data-lang-en="This clarifies a student's needs and respects their emotional space." data-lang-el="Διευκρινίζει τις ανάγκες των μαθητών και σέβεται το συναισθηματικό τους χώρο.">This clarifies a student's needs and respects their emotional space.</p></div></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Collapsible 4: Modeling Accountability & Humility -->
+            <div class="collapsible-container bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="collapsible-header flex justify-between items-center p-6 cursor-pointer border-t-4 border-yellow-500">
+                    <div class="flex items-center">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800" data-lang-en="Modeling Accountability & Humility" data-lang-el="Προαγωγή της Υπευθυνότητας & της Ταπεινότητας">Modeling Accountability & Humility</h2>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="p-6 pt-0 space-y-3">
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"I&apos;ve never thought about it that way before..."' data-lang-el='"Δεν το είχα σκεφτεί έτσι μέχρι τώρα..."'>"I've never thought about it that way before..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/19.jpg" data-src-en="images/19.jpg" data-src-el="images-greek/19.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+19';"><p class="text-yellow-800 flex-1" data-lang-en="This signals openness to new ideas and models intellectual curiosity." data-lang-el="Σηματοδοτεί ανοιχτό μυαλό σε νέες ιδέες και προβάλλει πνευματική περιέργεια.">This signals openness to new ideas and models intellectual curiosity.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"Let me think about that and I&apos;ll get back to you..."' data-lang-el='"Άσε με να το σκεφτώ και θα σου απαντήσω..."'>"Let me think about that..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/20.jpg" data-src-en="images/20.jpg" data-src-el="images-greek/20.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+20';"><p class="text-yellow-800 flex-1" data-lang-en="This sets a boundary while showing respect for a student's question." data-lang-el="Θέτει όριο αλλά δείχνει σεβασμό στην ερώτηση των μαθητών.">This sets a boundary while showing respect for a student's question.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"I understand how my feedback might have come across."' data-lang-el='"Καταλαβαίνω πώς μπορεί να ένιωσες για αυτά που σου είπα."'>"I understand how my feedback might have come across."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/21.jpg" data-src-en="images/21.jpg" data-src-el="images-greek/21.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+21';"><p class="text-yellow-800 flex-1" data-lang-en="This is a non-defensive way for a teacher to accept feedback from a student or a class." data-lang-el="Ένας μη αμυντικός τρόπος για τους εκπαιδευτικούς να βοηθήσουν τους μαθητές να αποδεχτούν σχόλια γι’ αυτούς.">This is a non-defensive way for a teacher to accept feedback from a student or a class.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"I&apos;m not sure, but let&apos;s look it up together."' data-lang-el='"Δεν είμαι σίγουρος, αλλά ας το ψάξουμε μαζί."'>"I'm not sure, but let's look it up together."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/22.jpg" data-src-en="images/22.jpg" data-src-el="images-greek/22.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+22';"><p class="text-yellow-800 flex-1" data-lang-en="This keeps the teacher teachable and shows that it's okay not to have all the answers." data-lang-el="Παρουσιάζει τους εκπαιδευτικούς ανθρώπινους και δείχνει ότι είναι αποδεκτό να μην έχεις όλες τις απαντήσεις.">This keeps the teacher teachable and shows that it's okay not to have all the answers.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"That wasn&apos;t my intention, but I see how my words affected you."' data-lang-el='"Δεν ήταν αυτή η πρόθεσή μου, αλλά βλέπω πώς σε επηρέασαν τα λόγια μου."'>"That wasn't my intention, but I see how my words affected you."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/23.jpg" data-src-en="images/23.jpg" data-src-el="images-greek/23.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+23';"><p class="text-yellow-800 flex-1" data-lang-en="This models owning impact, not just intent, in a classroom setting." data-lang-el="Προβάλλει την ιδιοκτησία της επίδρασης των λέξεων, όχι μόνο της πρόθεσης.">This models owning impact, not just intent, in a classroom setting.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"Thanks for pointing that out—I hadn&apos;t noticed that mistake."' data-lang-el='"Ευχαριστώ που το επεσήμανες — δεν είχα παρατηρήσει αυτό το λάθος."'>"Thanks for pointing that out..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/24.jpg" data-src-en="images/24.jpg" data-src-el="images-greek/24.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+24';"><p class="text-yellow-800 flex-1" data-lang-en="This demonstrates accountability and teaches students that mistakes are opportunities for learning." data-lang-el="Δείχνει υπευθυνότητα και διδάσκει ότι τα λάθη είναι ευκαιρίες για μάθηση.">This demonstrates accountability and teaches students that mistakes are opportunities for learning.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition" data-lang-en='"If I&apos;m incorrect about that, I want to understand why."' data-lang-el='"Αν κάνω λάθος σ’ αυτό, θέλω να καταλάβω γιατί."'>"If I'm incorrect about that, I want to understand why."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-yellow-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/25.jpg" data-src-en="images/25.jpg" data-src-el="images-greek/25.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fefce8/a16207?text=Image+25';"><p class="text-yellow-800 flex-1" data-lang-en="This makes space for teacher growth without defensiveness and models intellectual humility." data-lang-el="Δίνει χώρο για ανάπτυξη των εκπαιδευτικών χωρίς αμυντικότητα και προβάλλει πνευματική ταπεινότητα.">This makes space for teacher growth without defensiveness and models intellectual humility.</p></div></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Collapsible 5: De-escalating & Validating Feelings -->
+            <div class="collapsible-container bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="collapsible-header flex justify-between items-center p-6 cursor-pointer border-t-4 border-red-500">
+                    <div class="flex items-center">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800" data-lang-en="De-escalating & Validating Feelings" data-lang-el="Αποκλιμάκωση & Επικύρωση Συναισθημάτων">De-escalating & Validating Feelings</h2>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="p-6 pt-0 space-y-3">
+                        <li class="phrase-item"><div class="phrase p-3 bg-red-50 rounded-lg hover:bg-red-100 transition" data-lang-en='"You might be on to something there."' data-lang-el='"Ίσως είσαι πάνω σε κάτι σημαντικό."'>"You might be on to something there."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-red-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/26.jpg" data-src-en="images/26.jpg" data-src-el="images-greek/26.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fee2e2/b91c1c?text=Image+26';"><p class="text-red-800 flex-1" data-lang-en="This disarms tension in a discussion and encourages further exploration." data-lang-el="Χαλαρώνει την ένταση στη συζήτηση και ενθαρρύνει περαιτέρω διερεύνηση.">This disarms tension in a discussion and encourages further exploration.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-red-50 rounded-lg hover:bg-red-100 transition" data-lang-en='"It&apos;s completely fine not to know the answer right now."' data-lang-el='"Είναι απόλυτα φυσιολογικό να μην ξέρεις την απάντηση αυτή τη στιγμή."'>"It's completely fine not to know the answer..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-red-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/27.jpg" data-src-en="images/27.jpg" data-src-el="images-greek/27.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fee2e2/b91c1c?text=Image+27';"><p class="text-red-800 flex-1" data-lang-en="This shows emotional security and reduces the pressure to be perfect." data-lang-el="Δείχνει συναισθηματική ασφάλεια και μειώνει την πίεση για τελειότητα.">This shows emotional security and reduces the pressure to be perfect.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-red-50 rounded-lg hover:bg-red-100 transition" data-lang-en='"Let&apos;s take a break from this and come back to it when we&apos;re both calm."' data-lang-el='"Ας κάνουμε ένα διάλειμμα από αυτό και θα επανέλθουμε όταν είμαστε και οι δύο ήρεμοι."'>"Let's take a break from this..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-red-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/28.jpg" data-src-en="images/28.jpg" data-src-el="images-greek/28.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fee2e2/b91c1c?text=Image+28';"><p class="text-red-800 flex-1" data-lang-en="This teaches emotional regulation and guides a return to clarity." data-lang-el="Διδάσκει συναισθηματικό αυτοέλεγχο και οδηγεί σε επανέναρξη με καθαρό μυαλό.">This teaches emotional regulation and guides a return to clarity.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-red-50 rounded-lg hover:bg-red-100 transition" data-lang-en='"You don&apos;t have to explain why you didn&apos;t finish the assignment unless you want to."' data-lang-el='"Δεν χρειάζεται να εξηγήσεις γιατί δεν ολοκλήρωσες την εργασία, εκτός κι αν το επιθυμείς."'>"You don't have to explain why..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-red-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/29.jpg" data-src-en="images/29.jpg" data-src-el="images-greek/29.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fee2e2/b91c1c?text=Image+29';"><p class="text-red-800 flex-1" data-lang-en="This offers emotional safety and respects a student's privacy." data-lang-el="Προσφέρει συναισθηματική ασφάλεια και σέβεται την ιδιωτικότητα.">This offers emotional safety and respects a student's privacy.</p></div></div></li>
+                        <li class="phrase-item"><div class="phrase p-3 bg-red-50 rounded-lg hover:bg-red-100 transition" data-lang-en='"Let&apos;s take a breath before we continue discussing this."' data-lang-el='"Ας πάρουμε μια ανάσα πριν συνεχίσουμε τη συζήτηση."'>"Let's take a breath..."</div><div class="explanation-wrapper"><div class="explanation flex flex-col md:flex-row items-center gap-4 p-4 bg-red-50 rounded-b-lg"><img class="phrase-image w-64 h-64 object-cover rounded-lg shadow-md" src="images/30.jpg" data-src-en="images/30.jpg" data-src-el="images-greek/30.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/fee2e2/b91c1c?text=Image+30';"><p class="text-red-800 flex-1" data-lang-en="This creates a calm space in a tense conversation or moment." data-lang-el="Δημιουργεί ήρεμο περιβάλλον σε έντουςη συζήτηση ή στιγμή.">This creates a calm space in a tense conversation or moment.</p></div></div></li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-gray-600" data-lang-en="✨✍️ Devised by Panagiotis Domvros, English and Drama Teacher © 2025✍️✨" data-lang-el="✨✍️ Επιμέλεια: Παναγιώτης Δόμβρος, Εκπαιδευτικός Αγγλικής Γλώσσας και Θεατρολόγος © 2025✍️✨">✨✍️ Devised by Panagiotis Domvros, English and Drama Teacher © 2025✍️✨</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Collapsible Category Functionality ---
+            const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+            collapsibleHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const container = this.closest('.collapsible-container');
+                    // Close other open categories first
+                    document.querySelectorAll('.collapsible-container').forEach(otherContainer => {
+                        if (otherContainer !== container) {
+                            otherContainer.classList.remove('open');
+                        }
+                    });
+                    container.classList.toggle('open');
+                });
+            });
+
+            // --- Phrase Explanation & Image Reveal Functionality ---
+            const phrases = document.querySelectorAll('.phrase');
+            phrases.forEach(phrase => {
+                phrase.addEventListener('click', function (event) {
+                    event.stopPropagation(); 
+                    const parentItem = this.parentElement;
+                    const isActive = parentItem.classList.contains('active');
+                    const list = parentItem.closest('ul');
+                    if (list) {
+                        list.querySelectorAll('.phrase-item').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                    }
+                    if (!isActive) {
+                        parentItem.classList.add('active');
+                    }
+                });
+            });
+// --- Language Dropdown Functionality ---
+            const languageSelect = document.getElementById('language-select');
+            const translatableElements = document.querySelectorAll('[data-lang-en]');
+            const imageElements = document.querySelectorAll('.phrase-image');
+
+            languageSelect.addEventListener('change', function() {
+                const selectedLang = this.value; // 'en' or 'el'
+                
+                // Switch text content
+                translatableElements.forEach(el => {
+                    const text = selectedLang === 'el' ? el.dataset.langEl : el.dataset.langEn;
+                    if (text) {
+                         el.textContent = text;
+                    }
+                });
+
+                // Switch image sources
+                imageElements.forEach(img => {
+                    const src = selectedLang === 'el' ? img.dataset.srcEl : img.dataset.srcEn;
+                    if(src) {
+                        img.src = src;
+                    }
+                });
+
+                // Update the main document's lang attribute for accessibility
+                document.documentElement.lang = selectedLang;
+            });
+
+            // Trigger the change on page load to set the initial language to Greek
+            languageSelect.dispatchEvent(new Event('change'));
+        });
+    </script>
+
+</body>
+</html>
